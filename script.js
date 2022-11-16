@@ -1,8 +1,17 @@
 //^PALIDROMA
 //*Chiedere all’utente di inserire una parola. Creare una funzione per capire se la parola inserita è palindroma e poi usate quella funzione appena dichiarata
+//chiedi ad user di dirti parola finchè contenuto non è vuoto. 
+let userWord;
+do {
+userWord = prompt("inserisci la parola desiderata");
+} while (userWord.trim()=="")
+
+//dare esecuzione alla funzione
+isPalidrama(userWord);
+
 
 function isPalidrama(word){
-if(word==reverseWord(word)){
+if(word == reverseWord(word)){
     console.log("questa parola è Palidrama");
     return true
 } else {
@@ -21,7 +30,8 @@ function reverseWord(word){
 //~ reversedWord = [...word].reversed().join("");
 }
 
- //* Pari e Dispari=>
+
+ //^ Pari e Dispari=>
  //* L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 
  //* Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -29,6 +39,14 @@ function reverseWord(word){
 //* Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 //* Dichiariamo chi ha vinto (utente vince se la somma è pari);
 
+//chiedi all'utente di inserire il numero sempre finchè non inserisce il numero richiesto. 
+let userChoice;
+do {
+userChoice = +prompt("inserisci il numero tra 1 e 5");
+} while (typeof userChoice != "number" || userChoice<=1 || userChoice >=5)
+
+let computerChoice = generateRandom(1,5);
+winner(sumNumbers(userChoice,computerChoice));
 
 
 function winner(sum){
