@@ -30,6 +30,16 @@ function reverseWord(word){
 //* Dichiariamo chi ha vinto.
 
 
+function sumNumbers(...numbers){
+    let sum = 0;
+    for(let i = 0; i<numbers.length; i++){
+        sum+=numbers[i];
+    }
+    return sum
+}
+
+
+
 function generateRandom(start,end){
 let randomNumber = Math.floor(Math.random()*(end-start+1) + start); 
 return randomNumber;
