@@ -28,3 +28,9 @@ function reverseWord(word){
 //* Sommiamo i due numeri
 //* Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 //* Dichiariamo chi ha vinto.
+
+
+function generateRandom(start,end){
+let randomNumber = Math.floor(Math.random()*(end-start+1) + start); 
+return randomNumber;
+}
