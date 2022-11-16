@@ -27,8 +27,24 @@ function reverseWord(word){
  //* Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 //* Sommiamo i due numeri
 //* Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-//* Dichiariamo chi ha vinto.
+//* Dichiariamo chi ha vinto (utente vince se la somma è pari);
 
+
+
+function winner(sum){
+//~ pari(sum) returns true se pari, false se dispari
+  if(pari(sum)){
+console.log("Hai vinto!");
+return true
+ } else {
+console.log("hai perso");
+   return false
+ }
+}
+
+function pari(number){
+return number%2==0 ? true:false;
+}
 
 function sumNumbers(...numbers){
     let sum = 0;
@@ -37,8 +53,6 @@ function sumNumbers(...numbers){
     }
     return sum
 }
-
-
 
 function generateRandom(start,end){
 let randomNumber = Math.floor(Math.random()*(end-start+1) + start); 
