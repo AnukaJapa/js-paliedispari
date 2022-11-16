@@ -13,9 +13,11 @@ isPalidrama(userWord);
 function isPalidrama(word){
 if(word == reverseWord(word)){
     console.log("questa parola è Palidrama");
+    display("questa parola è palidrama");
     return true
 } else {
     console.log("questa parola non è Palidrama")
+    display("questa parola non è Palidrama");
     return false
 }
 }
@@ -49,13 +51,26 @@ let computerChoice = generateRandom(1,5);
 winner(sumNumbers(userChoice,computerChoice));
 
 
+function display(text){
+let container = document.querySelector(".container");
+let element =document.createElement(`h1`);
+element.textContent = text;
+container.append(element);
+}
+
+
 function winner(sum){
 //~ pari(sum) returns true se pari, false se dispari
+
   if(pari(sum)){
 console.log("Hai vinto!");
-return true
+result = "Hai vinto!"
+display(result);
+   return true
  } else {
 console.log("hai perso");
+result= "Hai perso!"
+display(result);
    return false
  }
 }
